@@ -56,7 +56,7 @@ def search(request):
         posts= Post.objects.none()
     else:
         posts= Post.objects.filter(Q(title__icontains=query) | Q(author__icontains=query) |Q(subtitle__icontains=query))
-        messages.success(request, f"Search results for: {query}")
+        messages.success(request, f"Search results for: <strong>{query}</strong>")
         if len(posts) < 1:
             messages.warning(request, "No Search results Found plz refine your query !")
     page = request.GET.get('page')

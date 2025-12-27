@@ -8,6 +8,7 @@ class Post(models.Model):
     subtitle= models.CharField(max_length= 50)
     author= models.CharField(max_length= 50)
     slug= models.CharField(max_length= 25)
+    views= models.IntegerField(default=0)
     image= models.ImageField(upload_to="posts/" )
     content= models.TextField()
     published_at = models.DateTimeField(auto_now_add= True, blank= True)

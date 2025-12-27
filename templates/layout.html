@@ -25,8 +25,8 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg ml-auto bg-dark-" id="mainNav">
-    <div class="container ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+    <div class="container-fluid px-3 ">
         <a class="navbar-brand" href="/">ICoder</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -49,7 +49,7 @@
         "
     >
 
-                <button class="btn btn-outline-dark" style="
+                <button class="btn btn-outline-light" style="
             height: 40px;
             padding-top: 4px;
             padding-bottom: 4px;
@@ -79,7 +79,7 @@
             height: 40px;
             padding-top: 4px;
             padding-bottom: 4px;">
-             <div class="panel-body text-dark ">Welcome {{request.user}}</div>
+             <div class="panel-body text-white ">Welcome {{request.user}}</div>
              </div>
             <a role="button" style="
             height: 40px;
@@ -96,7 +96,7 @@
 {% block header %}{% endblock %}
 {% for message in messages %}
 <div class="alert alert-{{message.tags}} alert-dismissible fade show position-relative" role="alert">
-    <strong>Message :</strong>{{message}}<button
+    <strong>Message :</strong>{{message|safe}}<button
         type="button"
         class="btn-close position-absolute end-0 top-50 translate-middle-y me-3"
         data-bs-dismiss="alert"

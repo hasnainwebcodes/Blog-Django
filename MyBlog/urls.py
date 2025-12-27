@@ -6,6 +6,7 @@ from . import views
 urlpatterns = [
     path('postComment/', views.postComment, name="postComment"),
     path('', views.index, name="home"),
+    path('postReply/', views.postReply, name="postReply"),
     path('<str:slug>/', views.postview, name="postview"),
 ]
 
